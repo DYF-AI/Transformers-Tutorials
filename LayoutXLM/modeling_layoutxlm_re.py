@@ -134,7 +134,7 @@ class LayoutLMv2RelationExtractionDecoder(nn.Module):
 
 class ViLayoutLMv2Model(LayoutLMv2PreTrainedModel):
     def __init__(self, config, use_visual_backbone=False):
-        requires_backends(self, "detectron2")
+        #requires_backends(self, "detectron2")
         super().__init__(config)
         self.config = config
         self.use_visual_backbone = use_visual_backbone

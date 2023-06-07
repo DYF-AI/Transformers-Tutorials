@@ -24,7 +24,7 @@ from modeling_layoutxlm_re import LayoutLMv2ForRelationExtraction
 import os
 DP = "/mnt/j/dataset/document-intelligence/XFUND/fr"
 OP = "/mnt/j/dataset/document-intelligence/XFUND/output"
-MP = "/mnt/j/model/pretrained-model/bert_torch"
+MP = "/mnt/j/model/pretrained-model/torch"
 
 use_visual_backbone=False
 
@@ -146,6 +146,7 @@ training_args = TrainingArguments(output_dir=output_dir,
                                   do_eval = True,
                                   evaluation_strategy = "steps",
                                   eval_steps = 100,
+                                  report_to = "tensorboard",
                                   )
 
 trainer = XfunReTrainer(
